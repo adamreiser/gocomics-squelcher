@@ -35,7 +35,7 @@ function seedLists() {
 
 seedLists();
 
-var blacklist = new RegExp(GM_getValue("blacklist"), "i");
+var blacklist = new RegExp(GM_getValue("blacklist").replace(/\n$/, ''), "i");
 var banlist = GM_getValue("banlist").split(",").map(decodeURIComponent);
 
 var num_comments = 0;
@@ -44,8 +44,8 @@ function hidePost(jNode) {
   com = jNode['context'];
   auth = com.getElementsByClassName('comment-top-orphan') [0].getElementsByTagName('img') [0].getAttribute('title');
   if (contains(banlist, auth) || blacklist.test(com.innerHTML)) {
-    jNode.css('display', 'none')
-    //console.log("Squelching comment from " + auth)
+    jNode.css('display', 'none');
+    //console.log("Squelching comment from " + auth);
   }
   else {
     num_comments++;
