@@ -1,5 +1,5 @@
 ## GoComics Squelcher
-For use with Greasemonkey. Hides comments matching a regular expressesion or posted by a user from a list, either of which you may define. Change the two URLs in the script to point to your definitions.
+For use with Greasemonkey. Hides comments matching a regular expressesion or posted by a user from a list, either of which you may define. Change the two URLs in the script to point to your definitions. **In 2017, the GoComics site was updated; this script will need to be updated to work on the current version.**
 
 ## Formatting
 regex.txt should look something like:
